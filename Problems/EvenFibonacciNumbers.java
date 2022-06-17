@@ -1,4 +1,7 @@
-package Solved;
+package Problems;
+
+// By considering the terms in the Fibonacci sequence whose values do not exceed four million.
+// Find the sum of the even-valued terms.
 
 public class EvenFibonacciNumbers {
     public static void main(String[] args) {
@@ -10,7 +13,6 @@ public class EvenFibonacciNumbers {
             c = a + b;
             if(c<4000000)
             {
-                System.out.println(c);
                 a = b;
                 b = c;
 
@@ -22,6 +24,6 @@ public class EvenFibonacciNumbers {
 
         }while(c<4000000);
 
-        System.out.println("The sum of the even-valued terms below four million is: " + evenTotalSum);
+        System.out.println("\nThe sum of the even-valued terms below four million is: " + evenTotalSum);
     }
 }
