@@ -3,19 +3,17 @@ package Problems;
 public class UsefulMethods {
     public static boolean isPrime(long number)
     {
-        if (number <= 1)
-        {
-            return false;
-        }
+        int count = 0;
+        long sqrt = (long)Math.sqrt(number);
 
-        for (int i = 2; i < number; i++)
-        {
-            if (number % i == 0)
-            {
+        for(long i = 1; i <= sqrt; i++) {
+            if(number % i == 0) {
+                count++;
+            }
+            if(count > 1) {
                 return false;
             }
         }
-
         return true;
     }
 }
